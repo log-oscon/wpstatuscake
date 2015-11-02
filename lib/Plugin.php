@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the dashboard.
  *
- * @link       https://github.com/log-oscon/statuscake-for-wp/
+ * @link       https://github.com/log-oscon/wpstatuscake/
  * @since      1.0.0
  *
  * @package    StatusCake
@@ -48,7 +48,7 @@ class Plugin {
 	 * @access    protected
 	 * @var       string    $pluginname    The string used to uniquely identify this plugin.
 	 */
-	protected $pluginname = 'statuscake-for-wp';
+	protected $pluginname = 'wpstatuscake';
 
 	/**
 	 * The current version of the plugin.

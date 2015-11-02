@@ -1,7 +1,7 @@
 <?php
 
 /**
- * StatusCake for WordPress
+ * wpStatusCake
  *
  * This plugin allows you to easily integrate StatusCake into your WordPress website.
  *
@@ -10,15 +10,15 @@
  * @package           StatusCake
  *
  * @wordpress-plugin
- * Plugin Name:       StatusCake for WordPress
- * Plugin URI:        https://github.com/log-oscon/statuscake-for-wp/
+ * Plugin Name:       wpStatusCake
+ * Plugin URI:        https://github.com/log-oscon/wpstatuscake/
  * Description:       Easy integration of StatusCake into your WordPress website.
  * Version:           1.0.0
  * Author:            log.OSCON, Lda.
  * Author URI:        http://log.pt/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       statuscake-for-wp
+ * Text Domain:       wpstatuscake
  * Domain Path:       /languages
  */
 

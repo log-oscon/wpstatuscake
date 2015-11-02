@@ -1,9 +1,9 @@
 {
-  "name": "statuscake-for-wp",
+  "name": "wpstatuscake",
   "version": "1.0.0",
   "description": "Easy integration of StatusCake into your WordPress website.",
   "license": "GPL-2.0+",
-  "repository": "https://github.com/log-oscon/statuscake-for-wp.git",
+  "repository": "https://github.com/log-oscon/wpstatuscake.git",
   "author": [
     {
       "name": "Sérgio Santos",

@@ -3,7 +3,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       https://github.com/log-oscon/statuscake-for-wp/
+ * @link       https://github.com/log-oscon/wpstatuscake/
  * @since      1.0.0
  *
  * @package    StatusCake

@@ -1,9 +1,9 @@
 {
-  "name": "logoscon/statuscake-for-wp",
+  "name": "logoscon/wpstatuscake",
   "description": "Easy integration of StatusCake into your WordPress website.",
   "type": "wordpress-plugin",
   "keywords": ["wordpress", "plugin"],
-  "homepage": "https://github.com/log-oscon/statuscake-for-wp",
+  "homepage": "https://github.com/log-oscon/wpstatuscake",
   "license": "GPL-2.0+",
   "authors": [
     {
@@ -18,8 +18,8 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/log-oscon/statuscake-for-wp/issues",
-    "source": "https://github.com/log-oscon/statuscake-for-wp"
+    "issues": "https://github.com/log-oscon/wpstatuscake/issues",
+    "source": "https://github.com/log-oscon/wpstatuscake"
   },
   "autoload": {
     "psr-4": {

@@ -1,4 +1,4 @@
-# StatusCake for WordPress #
+# wpStatusCake #
 **Contributors:** s3rgiosan, log_oscon  
 **Tags:** status, cake, monitoring, alerts, downtime, uptime  
 **Requires at least:** 4.0  
@@ -15,8 +15,8 @@ Easy integration of StatusCake into your WordPress website.
 
 This plugin allows you to easily integrate StatusCake into your WordPress website.  
 
-[Bug report](https://github.com/log-oscon/statuscake-for-wp/issues)  
-[Source](https://github.com/log-oscon/statuscake-for-wp)  
+[Bug report](https://github.com/log-oscon/wpstatuscake/issues)  
+[Source](https://github.com/log-oscon/wpstatuscake)  
 
 ### Usage ###
 
@@ -28,15 +28,15 @@ Navigate to the 'StatusCake' settings page under the Settings menu.
 
 1. Navigate to the 'Add New' in the plugins dashboard
 2. Navigate to the 'Upload' area
-3. Select `statuscake-for-wp.zip` from your computer
+3. Select `wpstatuscake.zip` from your computer
 4. Click 'Install Now'
 5. Activate the plugin in the Plugin dashboard
 
 ### Using FTP ###
 
-1. Download `statuscake-for-wp.zip`
-2. Extract the `statuscake-for-wp` directory to your computer
-3. Upload the `statuscake-for-wp` directory to the `/wp-content/plugins/` directory
+1. Download `wpstatuscake.zip`
+2. Extract the `wpstatuscake` directory to your computer
+3. Upload the `wpstatuscake` directory to the `/wp-content/plugins/` directory
 4. Activate the plugin in the Plugin dashboard
 
 
