@@ -10,7 +10,7 @@
  * @since      1.0.0
  *
  * @package    StatusCake
- * @subpackage StatusCake/Admin
+ * @subpackage StatusCake/lib
  */
 
 namespace logoscon\StatusCake;
@@ -22,7 +22,7 @@ namespace logoscon\StatusCake;
  * so that it is ready for translation.
  *
  * @package    StatusCake
- * @subpackage StatusCake/Admin
+ * @subpackage StatusCake/lib
  * @author     log.OSCON, Lda. <engenharia@log.pt>
  */
 class I18n {

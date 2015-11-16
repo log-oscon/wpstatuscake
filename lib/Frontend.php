@@ -7,7 +7,7 @@
  * @since      1.0.0
  *
  * @package    StatusCake
- * @subpackage StatusCake/Frontend
+ * @subpackage StatusCake/lib
  */
 
 namespace logoscon\StatusCake;
@@ -19,7 +19,7 @@ namespace logoscon\StatusCake;
  * enqueue the dashboard-specific stylesheet and JavaScript.
  *
  * @package    StatusCake
- * @subpackage StatusCake/Frontend
+ * @subpackage StatusCake/lib
  * @author     log.OSCON, Lda. <engenharia@log.pt>
  */
 class Frontend {
