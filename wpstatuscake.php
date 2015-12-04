@@ -20,6 +20,8 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       wpstatuscake
  * Domain Path:       /languages
+ * GitHub Plugin URI: https://github.com/log-oscon/wpstatuscake
+ * GitHub Branch:     master
  */
 
 if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
