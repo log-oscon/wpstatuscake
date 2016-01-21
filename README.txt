@@ -41,6 +41,9 @@ Navigate to the 'StatusCake' settings page under the Settings menu.
 
 == Changelog ==
 
+= 1.0.2 =
+* Fix PSR-4 loader conflict with older implementation.  
+
 = 1.0.1 =
 * Added GitHub Updater support.  
 * Added Update supported WordPress version.  
