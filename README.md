@@ -1,11 +1,11 @@
 # wpStatusCake #
-**Contributors:** s3rgiosan, log_oscon  
-**Tags:** status, cake, monitoring, alerts, downtime, uptime  
-**Requires at least:** 4.0  
-**Tested up to:** 4.3.1  
-**Stable tag:** trunk  
-**License:** GPLv2 or later  
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
+**Contributors:** s3rgiosan, log_oscon    
+**Tags:** status, cake, monitoring, alerts, downtime, uptime    
+**Requires at least:** 4.0    
+**Tested up to:** 4.3.1    
+**Stable tag:** 1.0.3    
+**License:** GPLv2 or later    
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html    
 
 Easy integration of StatusCake into your WordPress website.  
 
@@ -39,6 +39,21 @@ Navigate to the 'StatusCake' settings page under the Settings menu.
 3. Upload the `wpstatuscake` directory to the `/wp-content/plugins/` directory
 4. Activate the plugin in the Plugin dashboard
 
+## Changelog ##
+
+### 1.0.3 ###
+* Minor changes.  
+* Added language file. 
+
+### 1.0.2 ###
+* Fix PSR-4 loader conflict with older implementation.  
+
+### 1.0.1 ###
+* Added GitHub Updater support.  
+* Added Update supported WordPress version.  
+
+### 1.0.0 ###
+* Initial release.  
 
 ## Upgrade Notice ##
 

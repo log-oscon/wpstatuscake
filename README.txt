@@ -3,7 +3,7 @@ Contributors: s3rgiosan, log_oscon
 Tags: status, cake, monitoring, alerts, downtime, uptime  
 Requires at least: 4.0  
 Tested up to: 4.3.1  
-Stable tag: trunk  
+Stable tag: 1.0.3  
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -40,6 +40,10 @@ Navigate to the 'StatusCake' settings page under the Settings menu.
 4. Activate the plugin in the Plugin dashboard
 
 == Changelog ==
+
+= 1.0.3 =
+* Minor changes.  
+* Added language file. 
 
 = 1.0.2 =
 * Fix PSR-4 loader conflict with older implementation.  
