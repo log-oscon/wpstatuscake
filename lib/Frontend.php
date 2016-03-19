@@ -50,25 +50,41 @@ class Frontend {
 	 */
 	public function enqueue_scripts() {
 
+		if ( \is_admin() ) {
+			return;
+		}
+
+		if ( \is_feed() ) {
+			return;
+		}
+
+		if ( \is_robots() ) {
+			return;
+		}
+
+		if ( \is_trackback() ) {
+			return;
+		}
+
 		$rum_id = \get_option( 'statuscake_rum_id' );
 
-		if ( ! empty( $rum_id ) ) {
-
-			\wp_enqueue_script(
-				$this->plugin->get_plugin_name(),
-				'https://www.statuscake.com/App/RUM/embed.js',
-				array(),
-				$this->plugin->get_version(),
-				true
-			);
-
-			\wp_localize_script(
-				$this->plugin->get_plugin_name(),
-				'SC_RumID',
-				$rum_id
-			);
-
+		if ( empty( $rum_id ) ) {
+			return;
 		}
+
+		\wp_enqueue_script(
+			$this->plugin->get_plugin_name(),
+			'https://www.statuscake.com/App/RUM/embed.js',
+			array(),
+			false,
+			true
+		);
+
+		\wp_localize_script(
+			$this->plugin->get_plugin_name(),
+			'SC_RumID',
+			$rum_id
+		);
 
 	}
 

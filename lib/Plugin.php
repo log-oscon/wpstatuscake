@@ -57,7 +57,7 @@ class Plugin {
 	 * @access    protected
 	 * @var       string    $version    The current version of the plugin.
 	 */
-	protected $version = '1.0.3';
+	protected $version = '1.0.4';
 
 	/**
 	 * Define the core functionality of the plugin.
@@ -94,9 +94,9 @@ class Plugin {
 	 * @access    private
 	 */
 	private function define_admin_hooks() {
-		$plugin_admin = new Admin( $this );
-		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_admin_menu' );
-		$this->loader->add_action( 'admin_init', $plugin_admin, 'settings_init' );
+		$admin = new Admin( $this );
+		$this->loader->add_action( 'admin_menu', $admin, 'add_admin_menu' );
+		$this->loader->add_action( 'admin_init', $admin, 'settings_init' );
 	}
 
 	/**
@@ -107,9 +107,9 @@ class Plugin {
 	 * @access    private
 	 */
 	private function define_frontend_hooks() {
-		$plugin_frontend = new Frontend( $this );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_frontend, 'enqueue_scripts' );
-		$this->loader->add_filter( 'script_loader_tag',  $plugin_frontend, 'add_async_attribute', 10, 2 );
+		$frontend = new Frontend( $this );
+		$this->loader->add_action( 'wp_enqueue_scripts', $frontend, 'enqueue_scripts' );
+		$this->loader->add_filter( 'script_loader_tag',  $frontend, 'add_async_attribute', 10, 2 );
 	}
 
 	/**

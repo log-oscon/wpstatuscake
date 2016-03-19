@@ -70,8 +70,8 @@ class Admin {
 	public function add_admin_menu() {
 
 		\add_options_page(
-			__( 'StatusCake', 'wpstatuscake' ),
-			__( 'StatusCake', 'wpstatuscake' ),
+			\__( 'StatusCake', 'wpstatuscake' ),
+			\__( 'StatusCake', 'wpstatuscake' ),
 			'manage_options',
 			'statuscake',
 			array( $this, 'display_option_page' )
@@ -87,7 +87,7 @@ class Admin {
 	public function display_option_page() {
 		?>
 			<form action='options.php' method='post'>
-				<h2><?php _e( 'StatusCake', 'wpstatuscake' ); ?></h2>
+				<h2><?php \_e( 'StatusCake', 'wpstatuscake' ); ?></h2>
 				<?php
 					\settings_fields( $this->get_settings_name() );
 					\do_settings_sections( $this->get_settings_name() );
@@ -156,7 +156,7 @@ class Admin {
 
 		\add_settings_field(
 			'statuscake_rum_id',
-			__( 'Real User Monitoring ID', 'wpstatuscake' ),
+			\__( 'Real User Monitoring ID', 'wpstatuscake' ),
 			array( $this, 'display_rum_id' ),
 			$this->get_settings_name(),
 			'statuscake_settings_section',
