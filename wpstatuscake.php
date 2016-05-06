@@ -1,19 +1,19 @@
 <?php
-
 /**
- * wpStatusCake
+ * StatusCake
  *
  * This plugin allows you to easily integrate StatusCake into your WordPress website.
  *
- * @link              http://log.pt/
- * @since             1.0.0
- * @package           StatusCake
+ * @link    http://log.pt/
+ * @since   1.0.0
+ *
+ * @package StatusCake
  *
  * @wordpress-plugin
- * Plugin Name:       wpStatusCake
+ * Plugin Name:       StatusCake
  * Plugin URI:        https://github.com/log-oscon/wpstatuscake/
  * Description:       Easy integration of StatusCake into your WordPress website.
- * Version:           1.0.4
+ * Version:           1.0.5
  * Author:            log.OSCON, Lda.
  * Author URI:        http://log.pt/
  * License:           GPL-2.0+
@@ -38,9 +38,9 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Begins execution of the plugin.
  *
- * @since    1.0.0
+ * @since 1.0.0
  */
 \add_action( 'plugins_loaded', function () {
-    $plugin = new StatusCake\Plugin();
-    $plugin->run();
+	$plugin = new StatusCake\Plugin( 'wpsmartlook', '1.0.5' );
+	$plugin->run();
 } );

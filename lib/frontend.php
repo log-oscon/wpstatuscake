@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The public-facing functionality of the plugin.
  *
@@ -27,17 +26,17 @@ class Frontend {
 	/**
 	 * The plugin's instance.
 	 *
-	 * @since     1.0.0
-	 * @access    private
-	 * @var       Plugin    $plugin    This plugin's instance.
+	 * @since  1.0.0
+	 * @access private
+	 * @var    Plugin $plugin This plugin's instance.
 	 */
 	private $plugin;
 
 	/**
 	 * Initialize the class and set its properties.
 	 *
-	 * @since    1.0.0
-	 * @param    Plugin    $plugin    This plugin's instance.
+	 * @since 1.0.0
+	 * @param Plugin $plugin This plugin's instance.
 	 */
 	public function __construct( Plugin $plugin ) {
 		$this->plugin = $plugin;
@@ -46,7 +45,7 @@ class Frontend {
 	/**
 	 * Register the scripts for the public-facing side of the site.
 	 *
-	 * @since    1.0.0
+	 * @since 1.0.0
 	 */
 	public function enqueue_scripts() {
 
@@ -68,12 +67,12 @@ class Frontend {
 
 		$rum_id = \get_option( 'statuscake_rum_id' );
 
-		if ( empty( $rum_id ) ) {
+		if ( empty( trim( $rum_id ) ) ) {
 			return;
 		}
 
 		\wp_enqueue_script(
-			$this->plugin->get_plugin_name(),
+			$this->plugin->get_name(),
 			'https://www.statuscake.com/App/RUM/embed.js',
 			array(),
 			false,
@@ -81,7 +80,7 @@ class Frontend {
 		);
 
 		\wp_localize_script(
-			$this->plugin->get_plugin_name(),
+			$this->plugin->get_name(),
 			'SC_RumID',
 			$rum_id
 		);
@@ -91,18 +90,17 @@ class Frontend {
 	/**
 	 * Add async attribute to the HTML script tag of the enqueued script.
 	 *
-	 * @since     1.0.0
-	 * @param     string    $tag       The script's tag for the enqueued script.
-	 * @param     string    $handle    The script's registered handle.
-	 * @return    string               Possibly modified script's tag.
+	 * @since  1.0.0
+	 * @param  string $tag    The script's tag for the enqueued script.
+	 * @param  string $handle The script's registered handle.
+	 * @return string         Possibly-modified script's tag.
 	 */
 	public function add_async_attribute( $tag, $handle ) {
 
-		if ( $this->plugin->get_plugin_name() !== $handle ) {
+		if ( $this->plugin->get_name() !== $handle ) {
 			return $tag;
 		}
 
 		return str_replace( ' src', ' async src', $tag );
 	}
-
 }

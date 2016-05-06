@@ -3,7 +3,7 @@ module.exports = function (grunt) {
   var pkg = grunt.file.readJSON('package.json');
 
   var config = {
-    author:      'Sérgio Santos <me@s3rgiosan.com>',
+    author:      'log.OSCON, Lda. <engenharia@log.pt>',
     support:     'https://github.com/log-oscon/wpstatuscake/issues',
     pluginSlug:  'wpstatuscake',
     mainFile:    'wpstatuscake',
@@ -172,6 +172,8 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
+    'readme',
+    'pot',
     'composer:install:no-dev',
     'composer:dump-autoload:optimize:no-dev',
     'clean',
@@ -182,8 +184,6 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('deploy', [
-    'pot',
-    'wp_readme_to_markdown',
     'build',
     'wp_deploy',
   ]);

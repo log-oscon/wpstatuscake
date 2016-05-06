@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The dashboard-specific functionality of the plugin.
  *
@@ -27,26 +26,26 @@ class Admin {
 	/**
 	 * The plugin's instance.
 	 *
-	 * @since     1.0.0
-	 * @access    private
-	 * @var       Plugin    $plugin    This plugin's instance.
+	 * @since  1.0.0
+	 * @access private
+	 * @var    Plugin $plugin This plugin's instance.
 	 */
 	private $plugin;
 
 	/**
 	 * The unique identifier of this plugin settings group name.
 	 *
-	 * @since     1.0.0
-	 * @access    protected
-	 * @var       string    $settingsname    The string used to uniquely identify this plugin settings group name.
+	 * @since  1.0.0
+	 * @access protected
+	 * @var    string $settingsname The string used to uniquely identify this plugin settings group name.
 	 */
 	protected $settingsname = 'statuscake_settings';
 
 	/**
 	 * Initialize the class and set its properties.
 	 *
-	 * @since    1.0.0
-	 * @param    Plugin    $plugin    This plugin's instance.
+	 * @since 1.0.0
+	 * @param Plugin $plugin This plugin's instance.
 	 */
 	public function __construct( Plugin $plugin ) {
 		$this->plugin = $plugin;
@@ -55,8 +54,8 @@ class Admin {
 	/**
 	 * The settings group name.
 	 *
-	 * @since     1.0.0
-	 * @return    string    The settings group name.
+	 * @since  1.0.0
+	 * @return string The settings group name.
 	 */
 	public function get_settings_name() {
 		return $this->settingsname;
@@ -65,9 +64,9 @@ class Admin {
 	/**
 	 * Add sub menu page to the Settings menu.
 	 *
-	 * @since    1.0.0
+	 * @since 1.0.0
 	 */
-	public function add_admin_menu() {
+	public function admin_settings_menu() {
 
 		\add_options_page(
 			\__( 'StatusCake', 'wpstatuscake' ),
@@ -82,27 +81,29 @@ class Admin {
 	/**
 	 * Output the content of the settings page.
 	 *
-	 * @since    1.0.0
+	 * @since 1.0.0
 	 */
 	public function display_option_page() {
-		?>
+	?>
+		<div class="wrap">
+			<h1><?php \_e( 'StatusCake Settings', 'wpstatuscake' ); ?></h1>
 			<form action='options.php' method='post'>
-				<h2><?php \_e( 'StatusCake', 'wpstatuscake' ); ?></h2>
-				<?php
-					\settings_fields( $this->get_settings_name() );
-					\do_settings_sections( $this->get_settings_name() );
-					\submit_button();
-				?>
+			<?php
+				\settings_fields( $this->get_settings_name() );
+				\do_settings_sections( $this->get_settings_name() );
+				\submit_button();
+			?>
 			</form>
-		<?php
+		</div>
+	<?php
 	}
 
 	/**
 	 * Register groups of settings and their fields.
 	 *
-	 * @since    1.0.0
+	 * @since 1.0.0
 	 */
-	public function settings_init() {
+	public function admin_settings_init() {
 		$this->register_settings_sections();
 		$this->register_settings_fields();
 	}
@@ -110,26 +111,17 @@ class Admin {
 	/**
 	 * Register groups of settings.
 	 *
-	 * @since    1.0.0
+	 * @since 1.0.0
 	 */
 	public function register_settings_sections() {
 
 		\add_settings_section(
 			'statuscake_settings_section',
-			\apply_filters( 'statuscake_settings_section_title', '' ),
-			array( $this, 'display_settings_section' ),
+			'',
+			null,
 			$this->get_settings_name()
 		);
 
-	}
-
-	/**
-	 * Output the content of a settings section.
-	 *
-	 * @since    1.0.0
-	 */
-	public function display_settings_section() {
-		echo \apply_filters( 'statuscake_settings_section_content', '' );
 	}
 
 	/**
@@ -144,7 +136,7 @@ class Admin {
 	/**
 	 * Register `Real User Monitoring ID` setting.
 	 *
-	 * @since    1.0.0
+	 * @since 1.0.0
 	 */
 	public function register_rum_id() {
 
@@ -177,9 +169,8 @@ class Admin {
 		printf(
 			'<input type="text" id="%1$s" name="%1$s" value="%2$s">',
 			'statuscake_rum_id',
-			\sanitize_text_field( \get_option( 'statuscake_rum_id' ) )
+			\get_option( 'statuscake_rum_id' )
 		);
 
 	}
-
 }

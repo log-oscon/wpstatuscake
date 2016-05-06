@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The file that defines the core plugin class
  *
@@ -32,43 +31,33 @@ namespace logoscon\StatusCake;
 class Plugin {
 
 	/**
-	 * The loader that's responsible for maintaining and registering all hooks that power
-	 * the plugin.
-	 *
-	 * @since     1.0.0
-	 * @access    protected
-	 * @var       Loader    $loader    Maintains and registers all hooks for the plugin.
-	 */
-	protected $loader;
-
-	/**
 	 * The unique identifier of this plugin.
 	 *
-	 * @since     1.0.0
-	 * @access    protected
-	 * @var       string    $pluginname    The string used to uniquely identify this plugin.
+	 * @since  1.0.0
+	 * @access protected
+	 * @var    string
 	 */
-	protected $pluginname = 'wpstatuscake';
+	protected $name;
 
 	/**
 	 * The current version of the plugin.
 	 *
-	 * @since     1.0.0
-	 * @access    protected
-	 * @var       string    $version    The current version of the plugin.
+	 * @since  1.0.0
+	 * @access protected
+	 * @var    string
 	 */
-	protected $version = '1.0.4';
+	protected $version;
 
 	/**
 	 * Define the core functionality of the plugin.
 	 *
-	 * Create an instance of the loader which will be used to register the hooks
-	 * with WordPress.
-	 *
-	 * @since    1.0.0
+	 * @since 1.0.0
+	 * @param string $name    Plugin name.
+	 * @param string $version Plugin version.
 	 */
-	public function __construct() {
-		$this->loader = new Loader();
+	public function __construct( $name, $version ) {
+		$this->name    = $name;
+		$this->version = $version;
 	}
 
 	/**
@@ -77,85 +66,71 @@ class Plugin {
 	 * Uses the I18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
-	 * @since     1.0.0
-	 * @access    private
+	 * @since  1.0.0
+	 * @access private
 	 */
 	private function set_locale() {
-		$plugin_i18n = new I18n();
-		$plugin_i18n->set_domain( $this->get_plugin_name() );
-		$plugin_i18n->load_plugin_textdomain();
+		$i18n = new I18n();
+		$i18n->set_domain( $this->get_name() );
+		$i18n->load_plugin_textdomain();
 	}
 
 	/**
 	 * Register all of the hooks related to the dashboard functionality
 	 * of the plugin.
 	 *
-	 * @since     1.0.0
-	 * @access    private
+	 * @since  1.0.0
+	 * @access private
 	 */
 	private function define_admin_hooks() {
 		$admin = new Admin( $this );
-		$this->loader->add_action( 'admin_menu', $admin, 'add_admin_menu' );
-		$this->loader->add_action( 'admin_init', $admin, 'settings_init' );
+		\add_action( 'admin_menu', array( $admin, 'admin_settings_menu' ) );
+		\add_action( 'admin_init', array( $admin, 'admin_settings_init' ) );
 	}
 
 	/**
 	 * Register all of the hooks related to the public-facing functionality
 	 * of the plugin.
 	 *
-	 * @since     1.0.0
-	 * @access    private
+	 * @since  1.0.0
+	 * @access private
 	 */
 	private function define_frontend_hooks() {
 		$frontend = new Frontend( $this );
-		$this->loader->add_action( 'wp_enqueue_scripts', $frontend, 'enqueue_scripts' );
-		$this->loader->add_filter( 'script_loader_tag',  $frontend, 'add_async_attribute', 10, 2 );
+		\add_action( 'wp_enqueue_scripts', array( $frontend, 'enqueue_scripts' ) );
+		\add_filter( 'script_loader_tag',  array( $frontend, 'add_async_attribute' ), 10, 2 );
 	}
 
 	/**
-	 * Run the loader to execute all of the hooks with WordPress.
-	 *
 	 * Load the dependencies, define the locale, and set the hooks for the Dashboard and
 	 * the public-facing side of the site.
 	 *
-	 * @since    1.0.0
+	 * @since 1.0.0
 	 */
 	public function run() {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_frontend_hooks();
-		$this->loader->run();
 	}
 
 	/**
 	 * The name of the plugin used to uniquely identify it within the context of
 	 * WordPress and to define internationalization functionality.
 	 *
-	 * @since     1.0.0
-	 * @return    string    The name of the plugin.
+	 * @since  1.0.0
+	 * @return string The name of the plugin.
 	 */
-	public function get_plugin_name() {
-		return $this->pluginname;
-	}
-
-	/**
-	 * The reference to the class that orchestrates the hooks with the plugin.
-	 *
-	 * @since     1.0.0
-	 * @return    Loader    Orchestrates the hooks of the plugin.
-	 */
-	public function get_loader() {
-		return $this->loader;
+	public function get_name() {
+		return $this->name;
 	}
 
 	/**
 	 * Retrieve the version number of the plugin.
 	 *
-	 * @since     1.0.0
-	 * @return    string    The version number of the plugin.
+	 * @since  1.0.0
+	 * @return string The version number of the plugin.
 	 */
 	public function get_version() {
 		return $this->version;
 	}
-
 }
