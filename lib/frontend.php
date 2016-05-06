@@ -65,9 +65,9 @@ class Frontend {
 			return;
 		}
 
-		$rum_id = \get_option( 'statuscake_rum_id' );
+		$rum_id = trim( \get_option( 'statuscake_rum_id' ) );
 
-		if ( empty( trim( $rum_id ) ) ) {
+		if ( empty( $rum_id ) ) {
 			return;
 		}
 
