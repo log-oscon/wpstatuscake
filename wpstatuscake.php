@@ -41,6 +41,6 @@ if ( ! defined( 'WPINC' ) ) {
  * @since 1.0.0
  */
 \add_action( 'plugins_loaded', function () {
-	$plugin = new StatusCake\Plugin( 'wpsmartlook', '1.0.5' );
+	$plugin = new StatusCake\Plugin( 'wpstatuscake', '1.0.5' );
 	$plugin->run();
 } );
