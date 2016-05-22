@@ -14,9 +14,6 @@ namespace logoscon\StatusCake;
 /**
  * The dashboard-specific functionality of the plugin.
  *
- * Defines the plugin name, version, and two examples hooks for how to
- * enqueue the dashboard-specific stylesheet and JavaScript.
- *
  * @package    StatusCake
  * @subpackage StatusCake/lib
  * @author     log.OSCON, Lda. <engenharia@log.pt>
@@ -28,7 +25,7 @@ class Admin {
 	 *
 	 * @since  1.0.0
 	 * @access private
-	 * @var    Plugin $plugin This plugin's instance.
+	 * @var    Plugin
 	 */
 	private $plugin;
 
@@ -37,9 +34,9 @@ class Admin {
 	 *
 	 * @since  1.0.0
 	 * @access protected
-	 * @var    string $settingsname The string used to uniquely identify this plugin settings group name.
+	 * @var    string
 	 */
-	protected $settingsname = 'statuscake_settings';
+	protected $settings_name = 'statuscake_settings';
 
 	/**
 	 * Initialize the class and set its properties.
@@ -58,7 +55,7 @@ class Admin {
 	 * @return string The settings group name.
 	 */
 	public function get_settings_name() {
-		return $this->settingsname;
+		return $this->settings_name;
 	}
 
 	/**
@@ -67,6 +64,10 @@ class Admin {
 	 * @since 1.0.0
 	 */
 	public function admin_settings_menu() {
+
+		if ( ! \current_user_can( 'manage_options' ) ) {
+			return;
+		}
 
 		\add_options_page(
 			\__( 'StatusCake', 'wpstatuscake' ),
@@ -127,7 +128,7 @@ class Admin {
 	/**
 	 * Register settings fields..
 	 *
-	 * @since    1.0.0
+	 * @since 1.0.0
 	 */
 	public function register_settings_fields() {
 		$this->register_rum_id();
@@ -162,7 +163,7 @@ class Admin {
 	/**
 	 * Output the RUM ID field.
 	 *
-	 * @since    1.0.0
+	 * @since 1.0.0
 	 */
 	public function display_rum_id() {
 

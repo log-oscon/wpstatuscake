@@ -13,7 +13,7 @@
  * Plugin Name:       StatusCake
  * Plugin URI:        https://github.com/log-oscon/wpstatuscake/
  * Description:       Easy integration of StatusCake into your WordPress website.
- * Version:           1.0.6
+ * Version:           1.0.7
  * Author:            log.OSCON, Lda.
  * Author URI:        http://log.pt/
  * License:           GPL-2.0+
@@ -41,6 +41,6 @@ if ( ! defined( 'WPINC' ) ) {
  * @since 1.0.0
  */
 \add_action( 'plugins_loaded', function () {
-	$plugin = new StatusCake\Plugin( 'wpstatuscake', '1.0.6' );
+	$plugin = new StatusCake\Plugin( 'wpstatuscake', '1.0.7' );
 	$plugin->run();
 } );
