@@ -1,9 +1,11 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3c5a043b0a39444aace5cc1aa3e39e0f)](https://www.codacy.com/app/s3rgiosan/wpstatuscake?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=s3rgiosan/wpstatuscake&amp;utm_campaign=Badge_Grade)
+
 # StatusCake #
-**Contributors:** s3rgiosan, log_oscon    
+**Contributors:** [s3rgiosan](https://profiles.wordpress.org/s3rgiosan), [log_oscon](https://profiles.wordpress.org/log_oscon)  
 **Tags:** statuscake, monitoring, alerts, downtime, uptime    
 **Requires at least:** 4.0    
 **Tested up to:** 4.6    
-**Stable tag:** 1.0.8   
+**Stable tag:** 1.0.9   
 **License:** GPLv2 or later    
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html    
 
@@ -40,6 +42,9 @@ Navigate to the 'StatusCake' settings page under the Settings menu.
 4. Activate the plugin in the Plugin dashboard
 
 ## Changelog ##
+
+### 1.0.9 ###
+* Added Codacy (a tool for automated code review) badge.  
 
 ### 1.0.8 ###
 * Minor changes.  
