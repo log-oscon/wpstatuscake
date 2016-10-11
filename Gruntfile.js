@@ -10,7 +10,7 @@ module.exports = function (grunt) {
     textDomain:  'wpstatuscake',
     potFilename: 'wpstatuscake',
     badges:      {
-      codacy: '[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3c5a043b0a39444aace5cc1aa3e39e0f)](https://www.codacy.com/app/s3rgiosan/wpstatuscake?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=s3rgiosan/wpstatuscake&amp;utm_campaign=Badge_Grade)',
+      codacy: '[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3bb5bbe426834c01ac9d6acc7af36f3d)](https://www.codacy.com/app/s3rgiosan/wpstatuscake?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=log-oscon/wpstatuscake&amp;utm_campaign=Badge_Grade)',
     },
   };
 
