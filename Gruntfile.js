@@ -10,7 +10,11 @@ module.exports = function (grunt) {
     textDomain:  'wpstatuscake',
     potFilename: 'wpstatuscake',
     badges:      {
-      codacy: '[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3bb5bbe426834c01ac9d6acc7af36f3d)](https://www.codacy.com/app/s3rgiosan/wpstatuscake?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=log-oscon/wpstatuscake&amp;utm_campaign=Badge_Grade)',
+      packagist_stable:    '[![Latest Stable Version](https://poser.pugx.org/logoscon/wpstatuscake/v/stable)](https://packagist.org/packages/logoscon/wpstatuscake)',
+      packagist_downloads: '[![Total Downloads](https://poser.pugx.org/logoscon/wpstatuscake/downloads)](https://packagist.org/packages/logoscon/wpstatuscake)',
+      packagist_license:   '[![License](https://poser.pugx.org/logoscon/wpstatuscake/license)](https://packagist.org/packages/logoscon/wpstatuscake)',
+      codacy_grade:        '[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3bb5bbe426834c01ac9d6acc7af36f3d)](https://www.codacy.com/app/s3rgiosan/wpstatuscake?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=log-oscon/wpstatuscake&amp;utm_campaign=Badge_Grade)',
+      codeclimate_grade:   '[![Code Climate](https://codeclimate.com/github/log-oscon/wpstatuscake/badges/gpa.svg)](https://codeclimate.com/github/log-oscon/wpstatuscake)',
     },
   };
 

@@ -3,7 +3,7 @@ Contributors: s3rgiosan, log_oscon
 Tags: statuscake, monitoring, alerts, downtime, uptime  
 Requires at least: 4.0  
 Tested up to: 4.6  
-Stable tag: 1.0.10 
+Stable tag: 1.0.11 
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -15,31 +15,45 @@ Easy integration of StatusCake into your WordPress website.
 
 This plugin allows you to easily integrate StatusCake into your WordPress website.  
 
-[Bugs](https://github.com/log-oscon/wpstatuscake/issues)  
-[Source](https://github.com/log-oscon/wpstatuscake)  
-
 = Usage =
 
 Navigate to the 'StatusCake' settings page under the Settings menu.  
 
 == Installation ==
 
-= Uploading in WordPress Dashboard =
+= Dashboard =
 
-1. Navigate to the 'Add New' in the plugins dashboard
-2. Navigate to the 'Upload' area
-3. Select `wpstatuscake.zip` from your computer
-4. Click 'Install Now'
-5. Activate the plugin in the Plugin dashboard
+1. Go to the 'Plugins' menu, and choose 'Add New'.
+2. Search for 'wpstatuscake', and then click 'Install Now'.
+2. Click 'Activate'.
 
-= Using FTP =
+= FTP =
 
-1. Download `wpstatuscake.zip`
-2. Extract the `wpstatuscake` directory to your computer
-3. Upload the `wpstatuscake` directory to the `/wp-content/plugins/` directory
-4. Activate the plugin in the Plugin dashboard
+1. Download and extract the .zip file.
+2. Upload the unzipped folder to the `/wp-content/plugins/` directory.
+3. Activate the plugin through the 'Plugins' menu.
+
+= Composer =
+
+`composer require logoscon/wpstatuscake`
+
+== Frequently Asked Questions ==
+
+= Where can I report bugs? =
+
+Bugs can be reported on the [GitHub repository](https://github.com/log-oscon/wpstatuscake/issues).
+
+= How can I contribute? =
+
+Join in on our [GitHub repository](https://github.com/log-oscon/wpstatuscake) and read our [contribution](https://github.com/log-oscon/wpstatuscake/blob/master/CONTRIBUTING.md) guidelines.
 
 == Changelog ==
+
+= 1.0.11 =
+* Added Code Climate integration.  
+* Added moar badges (yes I am a badge poser).
+* Added contribution guidelines.  
+* Updated README. 
 
 = 1.0.10 =
 * Updated Codacy badge url.  
