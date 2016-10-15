@@ -76,7 +76,6 @@ class Admin {
 			'statuscake',
 			array( $this, 'display_options_page' )
 		);
-
 	}
 
 	/**
@@ -115,14 +114,12 @@ class Admin {
 	 * @since 1.0.0
 	 */
 	public function register_settings_sections() {
-
 		\add_settings_section(
 			'statuscake_settings_section',
 			'',
 			null,
 			$this->get_settings_name()
 		);
-
 	}
 
 	/**
@@ -154,10 +151,9 @@ class Admin {
 			$this->get_settings_name(),
 			'statuscake_settings_section',
 			array(
-				'label_for' => 'statuscake_rum_id'
+				'label_for' => 'statuscake_rum_id',
 			)
 		);
-
 	}
 
 	/**
@@ -166,12 +162,10 @@ class Admin {
 	 * @since 1.0.0
 	 */
 	public function display_rum_id() {
-
 		printf(
 			'<input type="text" id="%1$s" name="%1$s" value="%2$s">',
 			'statuscake_rum_id',
 			\get_option( 'statuscake_rum_id' )
 		);
-
 	}
 }
